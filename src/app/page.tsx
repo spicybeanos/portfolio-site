@@ -2,8 +2,8 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col flex-center items-center gap-[32px] row-start-2">
+    <div className="grid grid-rows-[20px_1fr_20px] items-top justify-items-center min-h-screen p-8 pb-20 ">
+      <main className="flex flex-col flex-center items-center gap-[20px] row-start-2">
         <Image
           className="aspect-square object-cover rounded-full filter"
           src="/me.jpg"
@@ -12,6 +12,8 @@ export default function Home() {
           height={120}
           priority
         />
+        <h1>Aryan Dalal</h1>
+        <div>Web | SDE | Back-end | Fullstack | Game-dev</div>
         <div>Website still under contruction!</div>
       </main>
       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
@@ -43,8 +45,19 @@ export default function Home() {
             width={16}
             height={16}
           />
-          E-mail me
+          aryan.d.dalal@gmail.com
         </a>
+        <div
+          className="flex items-center gap-2 hover:underline hover:underline-offset-4"        >
+          <Image
+            aria-hidden
+            src="/call-outline.svg"
+            alt="Globe icon"
+            width={16}
+            height={16}
+          />
+          +91-86522 07970
+        </div>
       </footer>
     </div>
   );
