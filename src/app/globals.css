@@ -4,7 +4,12 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --text: #e8faf5;
+  --background: #051612;
+  --primary: #8ee4cd;
+  --secondary: #1f5882;
+  --accent: #5389d6;
+
 }
 
 @theme inline {
@@ -29,14 +34,20 @@
   font-style: normal;
   font-display: swap;
 }
-h1{
+
+h1 {
   font-family: "Poppins";
-  font-weight: 200;
-  font-size: 60;
+  font-weight: 400;
+  font-size: 40;
 }
-div,li,p,a{
+
+div,
+li,
+p,
+a {
   font-family: "Poppins";
 }
+
 body {
   background: var(--background);
   color: var(--foreground);

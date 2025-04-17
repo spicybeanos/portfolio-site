@@ -1,3 +1,4 @@
+import ILink from "@/components/ILink";
 import Image from "next/image";
 
 export default function Home() {
@@ -13,8 +14,16 @@ export default function Home() {
           priority
         />
         <h1>Aryan Dalal</h1>
-        <div>Web | SDE | Back-end | Fullstack | Game-dev</div>
+        <div className="flex flex-row">
+          <ILink url="https://www.linkedin.com/in/aryan-d-dalal/">LinkedIn</ILink>
+          <ILink url="/resume.pdf">Resume</ILink>
+          <ILink url="mailto:aryan.d.dalal@gmail.com">Email</ILink>
+          <ILink url="https://github.com/spicybeanos">GitHub</ILink>
+        </div>
+        <div>Web | SDE | Back-end | Fullstack | Game-dev</div>  
+
         <div>Website still under contruction!</div>
+
       </main>
       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
         <a
@@ -40,12 +49,27 @@ export default function Home() {
         >
           <Image
             aria-hidden
-            src="/globe.svg"
+            src="/mail.svg"
             alt="Globe icon"
             width={16}
             height={16}
           />
-          aryan.d.dalal@gmail.com
+          Email me
+        </a>
+        <a
+          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
+          href="https://github.com/spicybeanos"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Image
+            aria-hidden
+            src="/github.svg"
+            alt="Globe icon"
+            width={16}
+            height={16}
+          />
+          Git Hub
         </a>
         <div
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"        >
