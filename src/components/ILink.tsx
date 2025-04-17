@@ -1,5 +1,5 @@
 // import CyberLink from "./CyberLink";
-import SlideLink from "./skibidi";
+import SlideLink from "./SlideLink";
 
 
 export default function ILink({ url, children }: { url: string, children: React.ReactNode }) {
