@@ -1,4 +1,4 @@
-import CSS from "csstype";
+// import CSS from "csstype";
 import './cyber_link.css';
 
 export default function CyberLink({  url, children }: {  url: string, children: React.ReactNode }) {
