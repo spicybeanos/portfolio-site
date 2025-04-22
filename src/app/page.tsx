@@ -21,7 +21,7 @@ export default function Home() {
       if (error) {
         console.error('Error fetching experiences:', error.message)
       } else if (data) {
-        const parsed: Experience[] = data.map((exp: any) => ({
+        const parsed: Experience[] = data.map((exp: Experience) => ({
           ...exp,
           from: new Date(exp.from),
           to: exp.to ? new Date(exp.to) : undefined,
@@ -64,9 +64,8 @@ export default function Home() {
 
           <h2>Experience</h2>
           {
-            loading && <>
-              <div>Loading...</div>
-            </>
+            loading &&
+            <div>Loading...</div>
           }
 
           {
@@ -74,7 +73,7 @@ export default function Home() {
 
             <div className="flex items-start justify-start flex-col w-[100%]">
               {
-                experiences.map((exp, index) => (
+                experiences.map((exp) => (
                   <IExperience
                     key={exp.id}
                     org={exp.org}

@@ -1,14 +1,13 @@
 
-
+// import Image from 'next/image'
 import './exp.css'
 import Pill from './pill'
-import Image from "next/image";
 import { Experience } from '../types';
 import ILink from './ILink';
 
 //rounded-tr-xl rounded-bl-xl
 //{ title, tags, url, description }: { title: string, tags: string, url?: string, description: string }
-export default function ApexExperience({ title, org, tags, url, description, image_url, is_present, from, to, id }: Experience) {
+export default function ApexExperience({ title, org, tags, url, description, image_url, is_present, from, to }: Experience) {
     return (
         <>
 
@@ -26,11 +25,8 @@ export default function ApexExperience({ title, org, tags, url, description, ima
                         <h1>{title}</h1>
 
                     </div>
-                    <div className='flex flex-row'>
-                        {
-                            is_present &&
-                            <div className='text-sm bg-[#444] pl-3 pr-3 rounded-full'>PRESENT</div>
-                        }
+                    <div className='text-xs text-[#999] italic mt-1'>
+                        {new Date(from).toLocaleDateString()} - {is_present ? 'Present' : to ? new Date(to).toLocaleDateString() : 'N/A'}
                     </div>
                     {org && <div className='text-sm'>{org}</div>}
                     {url && <ILink compact url={url}>Visit</ILink>}
