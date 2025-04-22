@@ -65,9 +65,7 @@ export default function Home() {
           <h2>Experience</h2>
           {
             loading && <>
-              <div>
-
-              </div>
+              <div>Loading...</div>
             </>
           }
 
