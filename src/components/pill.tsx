@@ -1,9 +1,9 @@
 
 
-export default function Pill({ text } : { text: string }) {
+export default function Pill({ children } : { children: React.ReactNode }) {
     return (<>
-        <div className="font-[Poppins] rounded-full p-1 pl-3 pr-3 border border-solid border-sm border-white">
-            {text}
+        <div className="font-[Poppins] bg-[#555] text-white text-xs rounded-full p-0.5 pl-2 pr-2">
+            {children}
         </div>
     </>)
 }

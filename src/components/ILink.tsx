@@ -2,10 +2,10 @@
 import SlideLink from "./SlideLink";
 
 
-export default function ILink({ url, children }: { url: string, children: React.ReactNode }) {
+export default function ILink({ url, compact, children }: { url: string, compact?: boolean, children: React.ReactNode }) {
     return (
         <>
-            <SlideLink url={url}>
+            <SlideLink url={url} compact={compact}>
                 {children}
             </SlideLink>
         </>

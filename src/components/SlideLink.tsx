@@ -1,11 +1,17 @@
 import './slide_link.css'
 
-export default function SlideLink({ url, children }: { url: string, children: React.ReactNode }) {
+export default function SlideLink({ url, compact, children }: { url: string, compact?: boolean, children: React.ReactNode }) {
     return (
         <>
-            <a className='slide' href={url} target='_blank'>
+            {compact && <a className='slide pl-1 pr-1' href={url} target='_blank'>
                 {children}
-            </a>
+            </a>}
+            {
+                !compact &&
+                <a className='slide p-2' href={url} target='_blank'>
+                    {children}
+                </a>
+            }
         </>
     )
 }
