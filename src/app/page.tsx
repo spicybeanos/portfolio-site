@@ -6,35 +6,13 @@ import Image from "next/image";
 import { useEffect, useState } from 'react'
 import type { Experience } from '@/types'
 import { supabase } from '@/lib/supa'
+import { experiences } from "@/lib/my_experiences";
+import { projects } from "@/lib/my_projects";
+import { blob } from "stream/consumers";
+import { IProject } from "@/components/IProject";
 
 export default function Home() {
-  const [experiences, setExperiences] = useState<Experience[]>([])
-  const [loading, setLoading] = useState(true)
-
-  useEffect(() => {
-    async function fetchExperiences() {
-      const { data, error } = await supabase
-        .from('experience')
-        .select('*')
-        .order('from', { ascending: false }) // Optional: sort by latest
-
-      if (error) {
-        console.error('Error fetching experiences:', error.message)
-      } else if (data) {
-        const parsed: Experience[] = data.map((exp: Experience) => ({
-          ...exp,
-          from: new Date(exp.from),
-          to: exp.to ? new Date(exp.to) : undefined,
-        }))
-        setExperiences(parsed)
-      }
-
-      setLoading(false)
-    }
-
-    fetchExperiences()
-  }, [])
-
+  const [expSelected, setExpSelexted] = useState(true);
 
   return (
     <>
@@ -55,43 +33,69 @@ export default function Home() {
             <ILink url="https://www.linkedin.com/in/aryan-d-dalal/">
               LinkedIn
             </ILink>
-            <ILink url="/resume.pdf">Resume</ILink>
+            <ILink url="/aryan_dalal_resume.pdf">Resume</ILink>
             <ILink url="mailto:aryan.d.dalal@gmail.com">Email</ILink>
             <ILink url="https://github.com/spicybeanos">GitHub</ILink>
+            <ILink url="https://wa.me/8652207970">Whatsapp</ILink>
           </div>
 
           <div>Website still under contruction!</div>
 
-          <h2>Experience</h2>
-          {
-            loading &&
-            <div>Loading...</div>
-          }
+          <div className="flex flex-row bg-[#090909] rounded-tr-2xl rounded-bl-2xl">
+            <button
+              className={"px-6 py-2 cursor-pointer rounded-tr-2xl rounded-bl-2xl " + (expSelected ? `bg-[#333] ` : ``)}
+              onClick={() => { setExpSelexted(true) }}
+            >
+              <h3>Experience</h3>
+            </button>
+            <button
+              className={"px-6 py-2 cursor-pointer rounded-tr-2xl rounded-bl-2xl " + (!expSelected ? `bg-[#333] ` : ``)}
+              onClick={() => { setExpSelexted(false) }}
+            >
+              <h3>Projects</h3>
+            </button>
+          </div>
 
-          {
-            !loading &&
+          <div className="flex items-start justify-start flex-col w-[100%]">
+            {
+              expSelected &&
+              experiences.map((exp) => (
+                <IExperience
+                  key={exp.id}
+                  org={exp.org}
+                  id={exp.id}
+                  is_present={exp.is_present}
+                  image_url={exp.image_url}
+                  title={exp.title}
+                  tags={exp.tags}
+                  description={exp.description}
+                  from={exp.from}
+                  url={exp.url}
+                  to={exp.to}
+                  blog={exp.blog}
+                />
+              ))
+            }
 
-            <div className="flex items-start justify-start flex-col w-[100%]">
-              {
-                experiences.map((exp) => (
-                  <IExperience
-                    key={exp.id}
-                    org={exp.org}
-                    id={exp.id}
-                    is_present={exp.is_present}
-                    image_url={exp.image_url}
-                    title={exp.title}
-                    tags={exp.tags}
-                    description={exp.description}
-                    from={exp.from}
-                    url={exp.url}
-                    to={exp.to}
-                  />
-                ))
-              }
+            {
+              !expSelected &&
+              projects.map((proj) => (
+                <IProject
+                  blog={proj.blog}
+                  demo_link={proj.demo_link}
+                  description={proj.description}
+                  id={proj.id}
+                  images_url={proj.images_url}
+                  prog_langs={proj.prog_langs}
+                  repo_link={proj.repo_link}
+                  technologies={proj.technologies}
+                  title={proj.title}
+                />
+              ))
+            }
 
-            </div>
-          }
+          </div>
+
 
 
         </main>
@@ -141,7 +145,9 @@ export default function Home() {
             />
             Git Hub
           </a>
-          <div
+          <a
+            href="https://wa.me/8652207970"
+            target="blank_"
             className="flex items-center gap-2 hover:underline hover:underline-offset-4"        >
             <Image
               aria-hidden
@@ -151,7 +157,7 @@ export default function Home() {
               height={16}
             />
             +91-86522 07970
-          </div>
+          </a>
         </footer>
       </div>
     </>

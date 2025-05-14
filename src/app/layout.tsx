@@ -7,7 +7,7 @@ const geistSans = Geist({
   subsets: ["latin"],
 });
 const poppins = Poppins({
-  weight: '400',
+  weight: '200',
   subsets: ['latin'],
 });
 const jetbrains = JetBrains_Mono({
@@ -32,7 +32,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${poppins} ${jetbrains} antialiased`}
+        className={`${poppins.className} antialiased`}
       >
         {children}
       </body>
