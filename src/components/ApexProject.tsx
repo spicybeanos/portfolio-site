@@ -19,7 +19,7 @@ export function ApexProject(
 ) {
     return (
         <>
-            <div className="max-w-[80vw] w-190 gap-5 transition-all delay-100 bg-(--background) hover:bg-[#222] rounded-tr-4xl rounded-bl-4xl p-3 m-2 flex flex-row justify-stretch ">
+            <div className="max-w-[80vw] w-190 gap-5 transition-all delay-100 bg-(--background) hover:bg-[#222] border border-[#222] border-solid border-2 rounded-tr-4xl rounded-bl-4xl p-3 m-2 flex flex-row justify-stretch ">
                 <div className='flex flex-col'>
                     <h1 className="text-center">{title}</h1>
                     <div className="m-3 flex flex-row gap-4 overflow-x-auto">
@@ -30,7 +30,7 @@ export function ApexProject(
                                 <img
                                     key={index}
                                     src={img}
-                                    className="aspect-square object-cover w-70 h-70 bg-white rounded-tr-3xl rounded-bl-3xl"
+                                    className="aspect-square object-cover w-70 h-70 rounded-tr-3xl rounded-bl-3xl"
                                 />
 
                             ))
