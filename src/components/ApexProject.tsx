@@ -25,11 +25,14 @@ export function ApexProject(
                     <div className="m-3 flex flex-row gap-4 overflow-x-auto">
                         {
                             images_url &&
-                            images_url.map((img) => (
+                            images_url.map((img, index) => (
+
                                 <img
+                                    key={index}
                                     src={img}
-                                    className="w-70 h-70 bg-white rounded-tr-3xl rounded-bl-3xl"
+                                    className="aspect-square object-cover w-70 h-70 bg-white rounded-tr-3xl rounded-bl-3xl"
                                 />
+
                             ))
                         }
                     </div>
