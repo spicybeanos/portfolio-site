@@ -1,6 +1,7 @@
 import { Project } from "@/types";
 import Image from "next/image";
 import ILink from "./ILink";
+import Pill from "./pill";
 
 
 export function ApexProject(
@@ -36,6 +37,7 @@ export function ApexProject(
                             ))
                         }
                     </div>
+
                     {
                         repo_link &&
                         <ILink url={repo_link}>
@@ -51,6 +53,31 @@ export function ApexProject(
                             </div>
                         </ILink>
                     }
+                    <div className="p-2 flex flex-row gap-1">
+                        {
+                            prog_langs &&
+                            prog_langs.map((p, k) => (
+                                <Pill
+                                    key={k}
+                                >
+                                    {p}
+                                </Pill>
+                            ))
+                        }
+                    </div>
+                    <div className="p-2 flex flex-row gap-1">
+                        {
+                            technologies &&
+                            technologies.map((p, k) => (
+                                <div
+                                    className="p-1 border border-white text-black bg-white rounded-md text-xs"
+                                    key={k}
+                                >
+                                    {p}
+                                </div>
+                            ))
+                        }
+                    </div>
 
                     <div className="p-2">
                         {description}

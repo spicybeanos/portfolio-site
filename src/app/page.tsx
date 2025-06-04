@@ -4,6 +4,10 @@ import IExperience from "@/components/IExperience";
 import ILink from "@/components/ILink";
 import Image from "next/image";
 import { useEffect, useState } from 'react'
+import EmailIcon from '@/components/EmailIcon';
+import GitHubIcon from '@/components/GitHubIcon';
+import LinkedInIcon from '@/components/LinkedInIcon'
+import WhatsappIcon from '@/components/WhatsappIcon'
 import type { Experience } from '@/types'
 import { supabase } from '@/lib/supa'
 import { experiences } from "@/lib/my_experiences";
@@ -31,12 +35,18 @@ export default function Home() {
 
           <div className="flex flex-row flex-wrap justify-center">
             <ILink url="https://www.linkedin.com/in/aryan-d-dalal/">
-              LinkedIn
+              <LinkedInIcon />
+            </ILink>
+            <ILink url="mailto:aryan.d.dalal@gmail.com">
+              <EmailIcon />
             </ILink>
             <ILink url="/aryan_dalal_resume.pdf">Resume</ILink>
-            <ILink url="mailto:aryan.d.dalal@gmail.com">Email</ILink>
-            <ILink url="https://github.com/spicybeanos">GitHub</ILink>
-            <ILink url="https://wa.me/8652207970">Whatsapp</ILink>
+            <ILink url="https://github.com/spicybeanos">
+              <GitHubIcon />
+            </ILink>
+            <ILink url="https://wa.me/8652207970">
+              <WhatsappIcon />
+            </ILink>
           </div>
 
           <div>Website still under contruction!</div>
@@ -81,6 +91,7 @@ export default function Home() {
               !expSelected &&
               projects.map((proj) => (
                 <IProject
+                  key={proj.id}
                   blog={proj.blog}
                   demo_link={proj.demo_link}
                   description={proj.description}
