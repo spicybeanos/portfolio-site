@@ -1,5 +1,5 @@
 import { Project } from "@/types";
-import { ApexProject } from "./ApexProject";
+import { ApexProject } from "./Apex/ApexProject";
 
 
 export function IProject(

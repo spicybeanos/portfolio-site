@@ -1,9 +1,9 @@
 
 // import Image from 'next/image'
-import './exp.css'
-import Pill from './pill'
-import { Experience } from '../types';
-import ILink from './ILink';
+import '../exp.css'
+import Pill from '../pill'
+import { Experience } from '../../types';
+import ILink from '../ILink';
 
 //rounded-tr-xl rounded-bl-xl
 //{ title, tags, url, description }: { title: string, tags: string, url?: string, description: string }

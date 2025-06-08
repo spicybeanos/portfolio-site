@@ -1,4 +1,5 @@
-import ApexExperience from './ApexExperience';
+import ApexExperience from './Apex/ApexExperience';
+import StaryExperience from './Stary/StaryExerience';
 import { Experience } from '@/types';
 
 //rounded-tr-xl rounded-bl-xl

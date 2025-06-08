@@ -1,7 +1,7 @@
 import { Project } from "@/types";
 import Image from "next/image";
-import ILink from "./ILink";
-import Pill from "./pill";
+import ILink from "../ILink";
+import Pill from "../pill";
 
 
 export function ApexProject(
