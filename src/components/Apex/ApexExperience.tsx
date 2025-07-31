@@ -4,6 +4,7 @@ import '../exp.css'
 import Pill from '../pill'
 import { Experience } from '../../types';
 import ILink from '../ILink';
+import { displayDate } from '@/lib/utils';
 
 //rounded-tr-xl rounded-bl-xl
 //{ title, tags, url, description }: { title: string, tags: string, url?: string, description: string }
@@ -25,7 +26,7 @@ export default function ApexExperience({ id, title, org, tags, url, description,
                         <h1>{title}</h1>
                     </div>
                     <div className='text-s text-[#999] italic mt-1'>
-                        {new Date(from).toLocaleDateString()} - {is_present ? 'Present' : to ? new Date(to).toLocaleDateString() : 'N/A'}
+                        {displayDate(new Date(from))} - {is_present ? 'Present' : to ? displayDate(new Date(to)) : 'N/A'}
                     </div>
                     {org && <div className='text-sm'>{org}</div>}
                     {url && <ILink compact url={url}>Visit</ILink>}

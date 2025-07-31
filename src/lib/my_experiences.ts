@@ -1,7 +1,19 @@
 import { Experience } from "@/types";
 
 export const experiences : Experience[] = [
-    
+    {
+       title:"Fullstack Intern",
+        description:"",
+        id:"bdu",
+        is_present:false,
+        image_url:"/logos/BDU.png",
+        org:"BizDateUp",
+        url:"https://www.bizdateup.com/",
+        tags:["react",'express','REST','axios','tailwind','docker',"postgre","sql","supabase"],
+        from:new Date("2025-06-05"),
+        to:new Date("2025-07-15"),
+        blog:false 
+    },    
     {
         title:"Technical Head",
         description:"Lead a team of front-end developers and made the front-end and back-end of the website, as well as an app for organizers to scan user QRs to verify pass bought",
