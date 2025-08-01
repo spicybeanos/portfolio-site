@@ -6,7 +6,7 @@ export const projects: Project[] = [
     {
         id: "rust-compiler-badger",
         title: "Compiler and interpreter",
-        blog: false,
+        blog: true,
         description: "A compiler and interpreter suite written in the rust programming language for my custom programming language: badger-script. You can run the interpreter by the command `cargo run i [file path]` and compile it to IR code using `cargo run i [file path] (optional)[o/p file path]`, the output file will be written to `path/to/file.ir`",
         repo_link: "https://github.com/spicybeanos/badger-script",
         prog_langs:["rust"],

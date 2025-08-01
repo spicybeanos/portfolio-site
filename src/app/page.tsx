@@ -55,17 +55,17 @@ export default function Home() {
               rotationInterval={2000}
             />
             <div className="flex flex-row flex-wrap justify-center">
-              <ILink url="https://www.linkedin.com/in/aryan-d-dalal/">
+              <ILink stay_page={true} url="https://www.linkedin.com/in/aryan-d-dalal/">
                 <LinkedInIcon />
               </ILink>
-              <ILink url="mailto:aryan.d.dalal@gmail.com">
+              <ILink stay_page={true} url="mailto:aryan.d.dalal@gmail.com">
                 <EmailIcon />
               </ILink>
-              <ILink url="/aryan_dalal_resume.pdf">Resume</ILink>
-              <ILink url="https://github.com/spicybeanos">
+              <ILink stay_page={true} url="/aryan_dalal_resume.pdf">Resume</ILink>
+              <ILink stay_page={true} url="https://github.com/spicybeanos">
                 <GitHubIcon />
               </ILink>
-              <ILink url="https://wa.me/8652207970">
+              <ILink stay_page={true} url="https://wa.me/8652207970">
                 <WhatsappIcon />
               </ILink>
             </div>
@@ -131,66 +131,7 @@ export default function Home() {
 
 
           </main>
-          <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-            <a
-              className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-              href="/aryan_dalal_resume.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Image
-                aria-hidden
-                src="/file.svg"
-                alt="File icon"
-                width={16}
-                height={16}
-              />
-              My Resume
-            </a>
-            <a
-              className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-              href="mailto:aryan.d.dalal@gmail.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Image
-                aria-hidden
-                src="/mail.svg"
-                alt="Globe icon"
-                width={16}
-                height={16}
-              />
-              Email me
-            </a>
-            <a
-              className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-              href="https://github.com/spicybeanos"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Image
-                aria-hidden
-                src="/github.svg"
-                alt="Globe icon"
-                width={16}
-                height={16}
-              />
-              Git Hub
-            </a>
-            <a
-              href="https://wa.me/8652207970"
-              target="blank_"
-              className="flex items-center gap-2 hover:underline hover:underline-offset-4"        >
-              <Image
-                aria-hidden
-                src="/call-outline.svg"
-                alt="Globe icon"
-                width={16}
-                height={16}
-              />
-              +91-86522 07970
-            </a>
-          </footer>
+          
         </div>
       </ClickSpark>
 

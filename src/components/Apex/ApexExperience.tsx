@@ -29,7 +29,7 @@ export default function ApexExperience({ id, title, org, tags, url, description,
                         {displayDate(new Date(from))} - {is_present ? 'Present' : to ? displayDate(new Date(to)) : 'N/A'}
                     </div>
                     {org && <div className='text-sm'>{org}</div>}
-                    {url && <ILink compact url={url}>Visit</ILink>}
+                    {url && <ILink stay_page={true} compact url={url}>Visit</ILink>}
                     {
                         tags &&
                         <div
@@ -47,7 +47,6 @@ export default function ApexExperience({ id, title, org, tags, url, description,
                     {
                         blog &&
                         <a className='m-1 p-1 hover:border hover:border-b-solid hover:border-0 hover:border-b-2 border-b-white transition-all delay-30' href={`/blogs/${id}`}>READ MORE</a>
-
                     }
 
                 </div>

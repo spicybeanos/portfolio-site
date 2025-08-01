@@ -37,22 +37,33 @@ export function ApexProject(
                             ))
                         }
                     </div>
+                    <div className="flex flex-row">
+                        {
+                            blog &&
+                            <ILink stay_page={false} url={`/blogs/${id}`}>
+                                Read More
+                            </ILink>
+                        }
+                        {
+                            repo_link &&
+                            <ILink stay_page={false} url={repo_link}>
+                                <div className="gap-1 flex flex-row">
+                                    <Image
+                                        aria-hidden
+                                        src="/github.svg"
+                                        alt="Globe icon"
+                                        width={16}
+                                        height={16}
+                                    />
+                                    Repo link
+                                </div>
+                            </ILink>
+                        }
+                    </div>
 
-                    {
-                        repo_link &&
-                        <ILink url={repo_link}>
-                            <div className="gap-1 flex flex-row">
-                                <Image
-                                    aria-hidden
-                                    src="/github.svg"
-                                    alt="Globe icon"
-                                    width={16}
-                                    height={16}
-                                />
-                                Repo link
-                            </div>
-                        </ILink>
-                    }
+                    <div className="p-2 flex flex-row gap-1">
+                        
+                    </div>
                     <div className="p-2 flex flex-row gap-1">
                         {
                             prog_langs &&
@@ -64,8 +75,6 @@ export function ApexProject(
                                 </Pill>
                             ))
                         }
-                    </div>
-                    <div className="p-2 flex flex-row gap-1">
                         {
                             technologies &&
                             technologies.map((p, k) => (
