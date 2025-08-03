@@ -33,7 +33,7 @@ export default function StaryExperience({ id, title, org, tags, url, description
                         {new Date(from).toLocaleDateString()} - {is_present ? 'Present' : to ? new Date(to).toLocaleDateString() : 'N/A'}
                     </div>
                     {org && <div className='text-sm'>{org}</div>}
-                    {url && <ILink compact url={url}>Visit</ILink>}
+                    {url && <ILink stay_page={false} compact url={url}>Visit</ILink>}
                     {
                         tags &&
                         <div
