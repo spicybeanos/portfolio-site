@@ -58,21 +58,24 @@ export function ApexProject(
                                     Repo link
                                 </div>
                             </ILink>
+                        }{
+                            demo_link &&
+                            <ILink stay_page={true} url={demo_link}>
+                                Take a look
+                            </ILink>
                         }
                     </div>
-
-                    <div className="p-2 flex flex-row gap-1">
-                        
-                    </div>
-                    <div className="p-2 flex flex-row gap-1">
+                    <div className="p-2 flex flex-row items-center gap-1">
                         {
                             prog_langs &&
                             prog_langs.map((p, k) => (
-                                <Pill
-                                    key={k}
-                                >
-                                    {p}
-                                </Pill>
+                                <div key={k}>
+                                    <Pill
+                                    >
+                                        {p}
+                                    </Pill>
+                                </div>
+
                             ))
                         }
                         {

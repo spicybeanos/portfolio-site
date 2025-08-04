@@ -2,11 +2,20 @@ import { Project } from "@/types";
 
 
 export const projects: Project[] = [
-
+    {
+        id:'time-tablr',
+        title:"Time Tablr",
+        blog:true,
+        description:"A website that generates your time table with all your electives and room numbers in place! No need to refer excel sheets and find your name in them to check what class you should go to next, this website has a precompiled list of all people and thier electives and what class they should go to, simply click the download button to download your timetable",
+        repo_link:"",
+        prog_langs:['TypeScript','Tailwind'],
+        technologies:['React','NextJS'],
+        demo_link:"https://time-tablr.vercel.app/"
+    },
     {
         id: "rust-compiler-badger",
         title: "Compiler and interpreter",
-        blog: true,
+        blog: false,
         description: "A compiler and interpreter suite written in the rust programming language for my custom programming language: badger-script. You can run the interpreter by the command `cargo run i [file path]` and compile it to IR code using `cargo run i [file path] (optional)[o/p file path]`, the output file will be written to `path/to/file.ir`",
         repo_link: "https://github.com/spicybeanos/badger-script",
         prog_langs:["rust"],
