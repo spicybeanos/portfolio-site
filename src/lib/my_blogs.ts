@@ -4,7 +4,8 @@ export interface Blog{
     contents?:Content[]
 }
 export interface Content{
-    images?:string[],
+    image?:string,
+    carousel?:string[],
     text?:string,
     urls?:string[],
     bigText?:string,
@@ -14,7 +15,8 @@ export const myBlogs : Blog[] = [
     {
         id:"rust-compiler-badger",
         title:"The Badger compiler"
-    },{
+    },
+    {
         id:"time-tablr",
         title:"Time Tablr",
         contents:[
@@ -23,7 +25,7 @@ export const myBlogs : Blog[] = [
             },
             {
                 text:"To solve this very problem I made a website that would tell you your timetable just by typing your name or registraion number in it, and voila: your time table for this semester",
-                images:['/images/TimeTablr.png']
+                image:'/images/TimeTablr.png'
             },
             {
                 bigText:"How?",

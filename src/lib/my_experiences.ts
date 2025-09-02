@@ -11,7 +11,7 @@ export const experiences : Experience[] = [
         url:"https://www.bizdateup.com/",
         tags:["react",'express','REST','axios','tailwind','docker',"postgre","sql","supabase"],
         from:new Date("2025-06-05"),
-        to:new Date("2025-07-15"),
+        to:new Date("2025-08-05"),
         blog:false 
     },    
     {

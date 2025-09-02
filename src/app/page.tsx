@@ -58,7 +58,7 @@ export default function Home() {
               <ILink stay_page={true} url="https://www.linkedin.com/in/aryan-d-dalal/">
                 <LinkedInIcon />
               </ILink>
-              <ILink stay_page={true} url="mailto:aryan.d.dalal@gmail.com">
+              <ILink stay_page={true} url="mailto:aryan.d.dalal+website@gmail.com">
                 <EmailIcon />
               </ILink>
               <ILink stay_page={true} url="/aryan_dalal_resume.pdf">Resume</ILink>
