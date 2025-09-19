@@ -12,7 +12,7 @@ export default function ApexExperience({ id, title, org, tags, url, description,
     return (
         <>
 
-            <div className="max-w-[80vw] w-190 gap-5 transition-all delay-100 bg-(--background) hover:bg-[#222] rounded-tr-2xl rounded-bl-2xl p-3 m-2 flex flex-row justify-stretch">
+            <div className="max-w-[80vw] w-190 gap-5 transition-all delay-100 bg-(--background) hover:shadow-md  hover:shadow-yellow-400/50 rounded-tr-2xl rounded-bl-2xl p-3 m-2 flex flex-row justify-stretch">
                 {
                     image_url &&
                     <img
